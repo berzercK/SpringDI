@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="belarus" class="com.netcracker.students.BatyrkinAndrew.di.primsObjs.BelarusPlace" scope="prototype"/>
+    <bean id="russia" class="com.netcracker.students.BatyrkinAndrew.di.primsObjs.RussiaPlace" scope="prototype"/>
+
+    <bean id="familyCollections" class="com.netcracker.students.BatyrkinAndrew.di.collects.ci.FamilyCollections">
+        <constructor-arg index="0">
+            <list>
+                <ref bean="akimov"/>
+                <ref bean="batyrkin"/>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <set>
+                <ref bean="batyrkin"/>
+                <ref bean="akimov"/>
+            </set>
+        </constructor-arg>
+        <constructor-arg index="2">
+            <map>
+                <entry key="first family" value-ref="akimov"/>
+                <entry key="second family" value-ref="batyrkin"/>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <!-- use @ConstructorProperties -->
+    <bean id="akimov" class="com.netcracker.students.BatyrkinAndrew.di.collects.ci.MyFamily" scope="prototype">
+        <constructor-arg value="Akimov"/>
+        <constructor-arg ref="belarus"/>
+        <constructor-arg value="5"/>
+    </bean>
+    <bean id="batyrkin" class="com.netcracker.students.BatyrkinAndrew.di.collects.ci.MyFamily" scope="prototype">
+        <constructor-arg value="Batyrkin"/>
+        <constructor-arg ref="russia"/>
+        <constructor-arg value="4"/>
+    </bean>
+
+
+</beans>

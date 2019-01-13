@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="belarus" class="com.netcracker.students.BatyrkinAndrew.di.primsObjs.BelarusPlace" scope="prototype"/>
+    <bean id="russia" class="com.netcracker.students.BatyrkinAndrew.di.primsObjs.RussiaPlace" scope="prototype"/>
+
+    <bean id="batyrkin" class="com.netcracker.students.BatyrkinAndrew.di.primsObjs.ci.Family" scope="prototype">
+        <constructor-arg index="0" value="Batyrkin"/>
+        <constructor-arg index="1" ref="russia"/>
+        <constructor-arg index="2" value="4"/>
+    </bean>
+
+    <bean id="akimov" class="com.netcracker.students.BatyrkinAndrew.di.primsObjs.ci.Family" scope="prototype">
+        <constructor-arg index="0" value="Akimov"/>
+        <constructor-arg index="1" ref="belarus"/>
+        <constructor-arg index="2" value="5"/>
+    </bean>
+
+
+</beans>
