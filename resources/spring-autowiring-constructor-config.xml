@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="book" class="com.netcracker.students.BatyrkinAndrew.autowiring.Book" autowire="constructor">
+        <constructor-arg value="My life"/>
+    </bean>
+
+    <bean id="author" class="com.netcracker.students.BatyrkinAndrew.SpEL.Author">
+        <property name="firstName" value="Andrew"/>
+        <property name="lastName" value="Batyrkin"/>
+        <property name="age" value="22"/>
+
+    </bean>
+
+
+</beans>

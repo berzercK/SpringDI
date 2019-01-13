@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="tree" class="com.netcracker.students.BatyrkinAndrew.inheritance.Tree" abstract="true">
+        <constructor-arg value="no"/>
+    </bean>
+
+    <bean id="apple" class="com.netcracker.students.BatyrkinAndrew.inheritance.AppleTree" parent="tree">
+        <constructor-arg index="1" value="Apple tree"/>
+        <constructor-arg index="2" value="apple"/>
+    </bean>
+
+    <bean id="birch" class="com.netcracker.students.BatyrkinAndrew.inheritance.BirchTree" parent="tree">
+        <constructor-arg index="1" value="Birch tree"/>
+    </bean>
+
+
+</beans>

@@ -3,10 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="belarus" class="com.netcracker.students.BatyrkinAndrew.di.primsObjs.BelarusPlace" scope="prototype"/>
-    <bean id="russia" class="com.netcracker.students.BatyrkinAndrew.di.primsObjs.RussiaPlace" scope="prototype"/>
+    <bean id="belarus" class="com.netcracker.students.BatyrkinAndrew.primsObjs.BelarusPlace" scope="prototype"/>
+    <bean id="russia" class="com.netcracker.students.BatyrkinAndrew.primsObjs.RussiaPlace" scope="prototype"/>
 
-    <bean id="familyCollections" class="com.netcracker.students.BatyrkinAndrew.di.collects.ci.FamilyCollections">
+    <bean id="familyCollections" class="com.netcracker.students.BatyrkinAndrew.collects.ci.FamilyCollections">
         <constructor-arg index="0">
             <list>
                 <ref bean="akimov"/>
@@ -28,12 +28,12 @@
     </bean>
 
     <!-- use @ConstructorProperties -->
-    <bean id="akimov" class="com.netcracker.students.BatyrkinAndrew.di.collects.ci.MyFamily" scope="prototype">
+    <bean id="akimov" class="com.netcracker.students.BatyrkinAndrew.collects.ci.MyFamily" scope="prototype">
         <constructor-arg value="Akimov"/>
         <constructor-arg ref="belarus"/>
         <constructor-arg value="5"/>
     </bean>
-    <bean id="batyrkin" class="com.netcracker.students.BatyrkinAndrew.di.collects.ci.MyFamily" scope="prototype">
+    <bean id="batyrkin" class="com.netcracker.students.BatyrkinAndrew.collects.ci.MyFamily" scope="prototype">
         <constructor-arg value="Batyrkin"/>
         <constructor-arg ref="russia"/>
         <constructor-arg value="4"/>

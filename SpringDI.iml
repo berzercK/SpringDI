@@ -19,6 +19,30 @@
         <fileset id="fileset5" name="Spring Di Si Collections Config" removed="false">
           <file>file://$MODULE_DIR$/resources/spring-di-si-collections-config.xml</file>
         </fileset>
+        <fileset id="fileset6" name="Spring Inheritance Config" removed="false">
+          <file>file://$MODULE_DIR$/resources/spring-inheritance-config.xml</file>
+        </fileset>
+        <fileset id="fileset7" name="Spring Spel Config" removed="false">
+          <file>file://$MODULE_DIR$/resources/spring-spel-config.xml</file>
+        </fileset>
+        <fileset id="fileset8" name="Spring Autowiring No Config" removed="false">
+          <file>file://$MODULE_DIR$/resources/spring-autowiring-no-config.xml</file>
+        </fileset>
+        <fileset id="fileset9" name="Spring Autowiring ByName Config" removed="false">
+          <file>file://$MODULE_DIR$/resources/spring-autowiring-byName-config.xml</file>
+        </fileset>
+        <fileset id="fileset10" name="Spring Autowiring ByType Config" removed="false">
+          <file>file://$MODULE_DIR$/resources/spring-autowiring-byType-config.xml</file>
+        </fileset>
+        <fileset id="fileset11" name="Spring Autowiring Constructor Config" removed="false">
+          <file>file://$MODULE_DIR$/resources/spring-autowiring-constructor-config.xml</file>
+        </fileset>
+        <fileset id="fileset12" name="Spring Factory Config" removed="false">
+          <file>file://$MODULE_DIR$/resources/spring-factory-config.xml</file>
+        </fileset>
+        <fileset id="fileset13" name="Spring Lookup Config" removed="false">
+          <file>file://$MODULE_DIR$/resources/spring-lookup-config.xml</file>
+        </fileset>
       </configuration>
     </facet>
   </component>

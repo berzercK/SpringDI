@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="pizzaShop" class="com.netcracker.students.BatyrkinAndrew.lookupMInj.MyPizzaShop">
+        <lookup-method name="makePizza" bean="pizza"/>
+        <lookup-method name="makeVeggiePizza" bean="veggiePizza"/>
+    </bean>
+
+    <bean id="pizza" class="com.netcracker.students.BatyrkinAndrew.lookupMInj.Pizza" scope="prototype"/>
+    <bean id="veggiePizza" class="com.netcracker.students.BatyrkinAndrew.lookupMInj.Pizza" scope="prototype">
+        <property name="veggie" value="true"/>
+    </bean>
+</beans>

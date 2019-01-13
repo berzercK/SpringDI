@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="book" class="com.netcracker.students.BatyrkinAndrew.autowiring.Book" autowire="no">
+        <property name="name" value="My life"/>
+        <property name="author" ref="author"/>
+    </bean>
+
+    <bean id="author" class="com.netcracker.students.BatyrkinAndrew.SpEL.Author">
+        <property name="firstName" value="Andrew"/>
+        <property name="lastName" value="Batyrkin"/>
+        <property name="age" value="22"/>
+
+    </bean>
+
+
+</beans>

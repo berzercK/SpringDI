@@ -3,10 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="belarus" class="com.netcracker.students.BatyrkinAndrew.di.primsObjs.BelarusPlace" scope="prototype"/>
-    <bean id="russia" class="com.netcracker.students.BatyrkinAndrew.di.primsObjs.RussiaPlace" scope="prototype"/>
+    <bean id="belarus" class="com.netcracker.students.BatyrkinAndrew.primsObjs.BelarusPlace" scope="prototype"/>
+    <bean id="russia" class="com.netcracker.students.BatyrkinAndrew.primsObjs.RussiaPlace" scope="prototype"/>
 
-    <bean id="familyCollectionsSI" class="com.netcracker.students.BatyrkinAndrew.di.collects.si.FamilyCollectionsSI">
+    <bean id="familyCollectionsSI" class="com.netcracker.students.BatyrkinAndrew.collects.si.FamilyCollectionsSI">
         <property name="myFamilyList">
             <list>
                 <ref bean="batyrkin"/>
@@ -30,13 +30,13 @@
     </bean>
 
 
-    <bean id="batyrkin" class="com.netcracker.students.BatyrkinAndrew.di.collects.si.MyFamilySI" scope="prototype">
+    <bean id="batyrkin" class="com.netcracker.students.BatyrkinAndrew.collects.si.MyFamilySI" scope="prototype">
         <property name="familyName" value="Batyrkin"/>
         <property name="iPlace" ref="russia"/>
         <property name="numOfPeople"  value="4"/>
     </bean>
 
-    <bean id="akimov" class="com.netcracker.students.BatyrkinAndrew.di.collects.si.MyFamilySI" scope="prototype">
+    <bean id="akimov" class="com.netcracker.students.BatyrkinAndrew.collects.si.MyFamilySI" scope="prototype">
         <property name="familyName" value="Akimov"/>
         <property name="iPlace" ref="russia"/>
         <property name="numOfPeople"  value="5"/>
